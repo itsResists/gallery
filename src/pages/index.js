@@ -3,15 +3,6 @@ import styles from '@/styles/Home.module.css'
 import { useState } from 'react'
 import UploadButton from '@/components/upload'
 import Gallery from '@/components/gallery'
-// import ImageHolder from '@/components/image'
-import buttonstyle from '@/styles/Buttons.module.css'
-import Image from 'next/image'
-
-
-
-
-
-
 
 export default function Home() {
   return (

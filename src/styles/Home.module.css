@@ -2,6 +2,7 @@
   background: linear-gradient(black,#e36700 ,black);
   min-width: 100vw;
   height: 100vh;
+  display: absolute;
 }
 
 .borderDev {
@@ -19,8 +20,12 @@ display: flex;
 .gallerycontainer {
   margin: 40px 15rem;
   display:grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  position: relative;
+  top: 20px;
+  left: 35px;
 }
 
 .imagebox {

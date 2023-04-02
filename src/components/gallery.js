@@ -28,7 +28,6 @@ const imageLinks = [
 
 export default function Gallery() {
     function ImageHolder() {
-
         return (
             <>
                 <p className={styles.imagebox}>
@@ -62,6 +61,10 @@ export default function Gallery() {
                 <ImageHolder />
                 <ImageHolder />
                 <ImageHolder />
+                <ImageHolder />
+                <ImageHolder />
+                <ImageHolder />
+
             </div >
             <div className={buttonstyle.morebuttoncontainer}>
                 <MoreButton onClick={getNewImages} />
