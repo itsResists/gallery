@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import { useState } from 'react'
 import UploadButton from '@/components/upload'
 import Gallery from '@/components/gallery'
 

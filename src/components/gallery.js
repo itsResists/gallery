@@ -2,6 +2,7 @@ import styles from '@/styles/Home.module.css'
 import buttonstyle from '@/styles/Buttons.module.css'
 import Image from 'next/image';
 import { useState } from 'react';
+import RatingButton from './ratings';
 
 // TODO Create function that fetches image links from database and returns them as an array
 
@@ -32,7 +33,9 @@ export default function Gallery() {
             <>
                 <p className={styles.imagebox}>
                     <Image src={currentImage} alt="Placeholder" width={200} height={200} />
+                    <RatingButton />
                 </p>
+
 
             </>
         )
