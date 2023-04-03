@@ -28,8 +28,7 @@ const imageLinks = [
 
 
 export default function Gallery() {
-    function ImageHolder(src) {
-        const [currentImage] = useState(imageLinks[Math.floor(Math.random() * imageLinks.length)])
+    function ImageHolder() {
         return (
             <>
                 <p className={styles.imagebox}>
@@ -45,15 +44,10 @@ export default function Gallery() {
     function MoreButton({ onClick }) {
         return <button className={buttonstyle.morebutton} onClick={onClick}>More Images</button>
     }
-    const [, setCurrentImage] = useState(imageLinks[Math.floor(Math.random() * imageLinks.length)])
+    const [currentImage, setCurrentImage] = useState(imageLinks[Math.floor(Math.random() * imageLinks.length)])
     function getNewImages() {
-        let moreImages = []
-        for (let i = 0; i < 15; i++) {
-            let newImages = imageLinks[Math.floor(Math.random() * imageLinks.length)]
-            moreImages.push(newImages)
-        }
-        console.log(moreImages)
-        setCurrentImage(moreImages);
+        let NewImages = imageLinks[Math.floor(Math.random() * imageLinks.length)]
+        setCurrentImage(NewImages);
     }
     return (
         <>
@@ -83,4 +77,30 @@ export default function Gallery() {
         </>
     )
 }
+
+//! This is the old code that I'm keeping for reference
+
+
+// function ImageHolder() {
+//     const [currentImage, setCurrentImage] = useState(imageLinks[Math.floor(Math.random() * imageLinks.length)])
+//     // let getRandomImage = imageLinks[Math.floor(Math.random() * imageLinks.length)]
+//     // let currentImage = getRandomImage
+//     function getNewImages() {
+//         let NewImages = imageLinks[Math.floor(Math.random() * imageLinks.length)]
+//         setCurrentImage(NewImages);
+//     }
+//     return (
+//         <>
+//             <p className={styles.imagebox}>
+//                 <Image src={currentImage} alt="Placeholder" width={200} height={200} />
+//             </p>
+//             <MoreButton onClick={getNewImages} />
+//         </>
+//     )
+// };
+
+// function MoreButton({ onClick }) {
+//     return <button className={buttonstyle.morebutton} onClick={onClick}>More Images</button>
+// }
+
 
