@@ -3,6 +3,7 @@ import styles from '@/styles/Home.module.css'
 import UploadButton from '@/components/upload'
 import Gallery from '@/components/gallery'
 
+
 export default function Home() {
   return (
     <>

@@ -2,7 +2,7 @@ import styles from '@/styles/Home.module.css'
 import buttonstyle from '@/styles/Buttons.module.css'
 import Image from 'next/image';
 import { useState } from 'react';
-import RatingButton from './ratings';
+
 
 // TODO Create function that fetches image links from database and returns them as an array
 
@@ -25,7 +25,25 @@ const imageLinks = [
     "https://i.imgur.com/wEy11SR.gif",
 ]
 
+function LikeButton() {
+    const [like, setLike] = useState(0)
+    return (
+        <>
+            <div className={buttonstyle.ratingbutton}><Image src='/images/thumbsup.png' width={30} height={30} alt='Like Button' onClick={() => setLike(like + 1)} /> {like}</div>
 
+        </>)
+
+}
+
+function DislikeButton() {
+    const [dislike, setDislike] = useState(0)
+    return (
+        <>
+            <div className={buttonstyle.ratingbutton}><Image src='/images/thumbsdown.png' width={30} height={30} alt='Like Button' onClick={() => setDislike(dislike + 1)} /> {dislike}</div>
+
+        </>)
+
+}
 
 export default function Gallery() {
     function ImageHolder(src) {
@@ -34,10 +52,10 @@ export default function Gallery() {
             <>
                 <p className={styles.imagebox}>
                     <Image src={currentImage} alt="Placeholder" width={200} height={200} />
-                    <RatingButton />
+                    <LikeButton />
+                    <br></br>
+                    <DislikeButton />
                 </p>
-
-
             </>
         )
     };

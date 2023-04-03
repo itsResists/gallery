@@ -1,3 +1,7 @@
+
+
+//! Old code from when every image was a copy of the first Image
+
 import styles from '@/styles/Home.module.css'
 import buttonstyle from '@/styles/Buttons.module.css'
 import Image from 'next/image';

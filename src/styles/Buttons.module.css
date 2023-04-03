@@ -51,7 +51,18 @@
     position: relative;
     bottom: 200px;
     left: 200px;
-    opacity: 75%;
+ 
     border-radius: 100%;
-    display: flex;   
+    display: flex;  
+
+  }
+
+  .ratingimage {
+    position: relative;
+    bottom: 200px;
+    left: 200px;
+    
+    border-radius: 100%;
+    display: flex;  
+
   }
